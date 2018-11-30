@@ -18,7 +18,7 @@ int main(void) {
   while(pass[strlen(pass) - 1] == '\n' || pass[strlen(pass) - 1] == '\r') pass[strlen(pass) - 1] = '\0';
   while(hashA[strlen(hashA) - 1] == '\n' || hashA[strlen(hashA) - 1] == '\r') hashA[strlen(hashA) - 1] = '\0';
 
-  char *hashB = crypt(pass, "00");
+  char *hashB = crypt(pass, hashA);
 
   if (hashB == NULL)
     printf("error\n");
@@ -29,4 +29,5 @@ int main(void) {
 
   return 0;
 }
+
 
